@@ -1,0 +1,6 @@
+require("Storage").write("octowatch.info",{
+  "name":"Octowatch",
+  "type":"clock",
+  "src":"octowatch.app.js",
+  "icon":"octowatch.img"
+});
