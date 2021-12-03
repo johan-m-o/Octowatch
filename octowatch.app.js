@@ -1,4 +1,4 @@
-/* Octonauts Octowatch v1.0 for the Bangle.js 1 - by Johan Oscarsson
+/* Octonauts Octowatch v1.01 for the Bangle.js 1 - by Johan Oscarsson
    Works for the Bangle.js 2 as well, but will not look
    quite as nice due to the low-bit display.
 
@@ -57,7 +57,7 @@ var phoneFreq = 3000; // Frequency used for the phone call
 var imgOcto = require("heatshrink").decompress(atob("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"));
 
 // Phone image
-var imgPhone = require("heatshrink").decompress(atob("+HwwJC/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AB3//wcav////8DjEfDgIAB+AcWgIcDAAIdWh4dF8B1YAAZ5VLAxaWLAxaWn4dH/AdTDg///wcSgYdI/+AOy38W4h4Sj4WFEgfwdqjpEA46UQKIg8CSyKUCCgyWTg7nIe4XASiQTGE4SWQGIQJGgJFIWRapIBRQwJJxBkCWSKKIPAS0OCIRHLWh0Pdo7xF8DQPU5S/BaRwQMFRjFFNRSEBaRymMYAKEKUwoNYFoZLMM4LwMNIKHMUYLwMdwLDMWgLwMDoIObFgJKMNAJKMNAKGMUgKGMUgLgOYRr+NgAdNBpotOJIJnMQ4YdoUYLBMcIbDKb4L9MAAMPf5YdBBhQQQFRhMQMxiIQDoIcNYgQdKYBjiQn/+Dp0ADpd//gdPCJYddI5ZrRDri/McaAdf8AdPh4dJgYdTwAdJ4AdPg4dJBQIdSCRAoKJyQddQRSoSXxTkSDrsf/wdQgH/+Ad/DpaoBAAS+GDpM//j2GAAjoFv/4DpqmBAAwdUj4dHKYgdKBIY6IHgoTEDpMPDpPgDqIcJ/7CDDpJjDWAy2IY4wdGSZCXGDpQNCv4dLDIUfDpgcLPAYdMZ5TTFDpkDDpuADpqyMWgYdJUYQdRegYdlh6qGXg3gHaQTBAAQnELKYTBAAQJGDqLHBAATbEDphSBDqEPDqAMEgIduO4wdLSphtEDpKBBDqAPGDv4dpv4dBRYYdKAoMf/gd/DowTDB41/E4gdNCYQdJBIQdK/ADBn4TBAoQADBIs/DpgAPDpM/DqYTIDvhjIABKLJDvcf/wdR//wDv4dhh//DiEB//gDs+ADp8DDpMHDqfADs4KICSQoKJySCKVCS+KciQdB+AdPj4dngH//AdPn/+Ds9//gdPCJYddI5ZrRn6hKYowdKX5bjRDoOADpsDDpcP//ADpsH//gBhYdQCBQqMJiBmMRCDAMcSAddgH//gdNv/+BrItPv5JMNIQdMM4KjKYYaHMYILfKf4bhMfoPgBzgsMJQIdMJQJoMQwJoMQwLCOUhjCBaRYNNfwYtLJIP+DppLBNJSFBM5iHDWhSyBUZgQOFRjwFNRSEBdxhqDUxKyCdximDCJIpCdxgvENZCDBdxzSDYpAKKU5IwHIwTQOJwh4GOwTQOCYgxGIoSyOWgjxGBAKyPCgvgA4cPExC0NVQoHHSyA8DHQSURCwo1BHIRhGSyAAHSiKWEAAqUSc4gAFe4x4SOywABgIdHDibpEW4gdVLQxYULRAcVAAMfDgfwDq55DOqwAE//+DjQA/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/ACAA="))
+var imgPhone = require("heatshrink").decompress(atob("+HwwJC/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AB3//wcav////8DjEfDgIAB+AcWgIcDAAIdWh4dF8B1YAAZ5VLAxaWLAxaWn4dH/AdTDg///wcSgYdI/+AOy38W4h4Sj4WFEgfwdqjpEA46UQKIg8CSyKUCCgyWTg7nIe4XASiQTGE4SWQGIQJGgJFIWRapIBRQwJJxBkCWSKKIPAS0OCIRHLWh0Pdo7xF8DQPU5S/BaRwQMFRjFFNRSEBaRymMYAKEKUwoNYFoZLMM4LwMNIKHMUYLwMdwLDMWgLwMDoIObFgJKMNAJKMNAKGMUgKGMUgLgOYRr+NgAdNBpotOJIJnMQ4YdoUYLBMcIbDKb4L9MAAMPf5YdBBhQQQFRhMQMxiIQDoIcNYgQdKYBjiQn/+Dp0ADpd//gdPCJYddI5ZrRDri/McaAdf8AdPh4dJgYdTwAdJ4AdPg4dJBQIdSCRAoKJyQddQRSoSXxTkSDrsf/wdQgH/+Ad/DpaoBAAS+GDpM//j2GAAjoFv/4DpqmBAAwdUj4dHKYgdKBIY6IHgoTEDpMPDpPgDqIcJ/7CDDpJjDWAy2IY4wdGSZCXGDpQNCv4dLDIUfDpgcLPAYdMZ5TTFDpkDDpuADpqyMWgYdJUYQdRegYdlh6qGXg3gHaQTBAAQnELKYTBAAQJGDqLHBAATbEDphSBDqEPDqAMEgIduO4wdLSphtEDpKBBDqAPGDv4dpv4dBRYYdKAoMf/gd/DowTDB41/E4gdNCYQdJBIQdK/ADBn4TBAoQADBIs/DpgAPDpM/DqYTIDvhjIABKLJDvcf/wdR//wDv4dhh//DiEB//gDs+ADp8DDpMHDqfADs4KICSQoKJySCKVCS+KciQdB+AdPj4dngH//AdPn/+Ds9//gdPCJYddI5ZrRn6hKYowdKX5bjRDoOADpsDDpcP//ADpsH//gBhYdQCBQqMJiBmMRCDAMcSAddgH//gdNv/+BrItPv5JMNIQdMM4KjKYYaHMYILfKf4bhMfoPgBzgsMJQIdMJQJoMQwJoMQwLCOUhjCBaRYNNfwYtLJIP+DppLBNJSFBM5iHDWhSyBUZgQOFRjwFNRSEBdxhqDUxKyCdximDCJIpCdxgvENZCDBdxzSDYpAKKU5IwHIwTQOJwh4GOwTQOCYgxGIoSyOWgjxGBAKyPCgvgA4cPExC0NVQoHHSyA8DHQSURCwo1BHIRhGSyAAHSiKWEAAqUSc4gAFe4x4SOywABgIdHDibpEW4gdVLQxYULRAcVAAMfDgfwDq55DOqwAE//+DjQA/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/AH4A/ACAA="));
 
 // Draw the watch face
 function drawFace(back,octo) {
@@ -108,23 +108,25 @@ function alert() {
 // Start or stop the Octo Alert
 function trigger() {
   sStart = 0;
-  if (active == 1) { // Clear everything and set the default face
-    clearInterval(alertID);
-    g.clear();
-    backDraw = 0;
-    drawFace(cB,cW);
-    active = 0;
-    cntV = 0;
-    cntA = 0;
-    cntTime = 0;
-    tmpFreq = aFreq;
-    ctrlPhone = 0;
-    Bangle.setLCDTimeout(10);
-  } else { // Start Octo Alert
-    Bangle.setLCDTimeout(0); // Keep screen on during alert
-    backDraw = 0;
-    alertID = setInterval(alert, intL);
-    active = 1;
+  if (ctrlPhone != 1) { // No alert during call screen
+    if (active == 1) { // Clear everything and set the default face
+      clearInterval(alertID);
+      g.clear();
+      backDraw = 0;
+      drawFace(cB,cW);
+      active = 0;
+      cntV = 0;
+      cntA = 0;
+      cntTime = 0;
+      tmpFreq = aFreq;
+      ctrlPhone = 0;
+      Bangle.setLCDTimeout(10);
+    } else { // Start Octo Alert
+      Bangle.setLCDTimeout(0); // Keep screen on during alert
+      backDraw = 0;
+      alertID = setInterval(alert, intL);
+      active = 1;
+    }
   }
 }
 
@@ -144,13 +146,15 @@ function settingsB() {
     setTimeout(function() {
       sStart = 0;
       if (process.env.HWVERSION==2) { // On Bangle.js v2 BTN1 calls a random Octonauts character if not pressed 3 times within the set time
-        if (ctrlPhone == 0) {
-          callScreen();
-        } else if (ctrlPhone == 2) {
-          ctrlPhone = 0;
-          g.clear();
-          backDraw = 0;
-          drawFace(cB,cW);
+        if (active == 0) { // No calls during an alert
+          if (ctrlPhone == 0) {
+            callScreen();
+          } else if (ctrlPhone == 2) {
+            ctrlPhone = 0;
+            g.clear();
+            backDraw = 0;
+            drawFace(cB,cW);
+          }
         }
       }
     }, 500);
@@ -171,7 +175,7 @@ function callScreen() {
       Bangle.beep(1000, phoneFreq);
     }, 2000);
 
-    setTimeout(phoneCall, 5000)
+    setTimeout(phoneCall, 5000);
   }
 }
 
@@ -201,13 +205,15 @@ if (process.env.HWVERSION==1) {
   }, BTN2, { repeat: true, edge: "falling"});
   setWatch(function() {
     sStart = 0;
-    if (ctrlPhone == 0) {
-      callScreen(); // On Bangle.js v1 BTN3 calls a random Octonauts character
-    } else if (ctrlPhone == 2) {
-      ctrlPhone = 0;
-      g.clear();
-      backDraw = 0;
-      drawFace(cB,cW);
+    if (active == 0) { // No calls during an alert
+      if (ctrlPhone == 0) {
+        callScreen(); // On Bangle.js v1 BTN3 calls a random Octonauts character
+      } else if (ctrlPhone == 2) {
+        ctrlPhone = 0;
+        g.clear();
+        backDraw = 0;
+        drawFace(cB,cW);
+      }
     }
   }, BTN3, { repeat: true, edge: "falling"});
 }
